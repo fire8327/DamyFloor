@@ -18,3 +18,11 @@ $(".tab-main").each(function(index) {
   
     $this.tabs();
 });
+
+
+/* cart */
+$('#cartToggler').mouseenter(() => {
+  $('#cartList').show(300);
+}).mouseleave(() => {
+  $('#cartList').hide(300);
+});

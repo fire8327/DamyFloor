@@ -7,13 +7,110 @@
     <link rel="stylesheet" href="Assets/CSS/main.css">
 </head>
 <body class="bg-[#F6F0E6] font-Nunito-Sans">
-    <header class="w-full grid-container py-4">
+    <header class="w-full grid-container py-4 relative">
         <div class="w-full flex items-center justify-end">
-            <button>
+            <button id="cartToggler">
                 <img src="Assets/Images/header/cart.png" alt="" class="w-8 md:w-10 xl:w-12">
             </button>
         </div>
+
+        <div id="cartList" class="hidden max-lg:hidden absolute z-[3] right-0 top-full">
+            <div class="bg-[#F6F0E6] flex flex-col gap-3.5 w-[500px] xl:w-[600px] border border-[#676767]">
+                <div class="relative py-2.5 border-b border-[#676767]">
+                    <button class="absolute top-2.5 right-2.5">
+                        <img src="Assets/Images/order/close.png" alt="">
+                    </button>
+                    <div class="pl-2 pr-8 flex items-center justify-between">
+                        <div class="flex items-center gap-7">
+                            <img src="Assets/Images/order/product1.png" alt="" class="w-[100px] h-[100px]">
+                            <div class="flex flex-col gap-5">
+                                <div class="flex flex-col">
+                                    <p class="font-semibold text-2xl xl:text-3xl">Дуб горный</p>
+                                    <div class="flex items-center gap-2 text-sm xl:text-base text-[#676767]">
+                                        <p>Коллекция:</p>
+                                        <a href="" class="underline">FAMILY</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <p class="text-sm xl:text-base">2 599 ₽ / м2</p>
+                                    <p class="text-base xl:text-[18px] font-bold">x 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-bold text-xl xl:text-2xl">2 599 ₽ / м2</p>
+                    </div>
+                </div>
+                <div class="relative py-2.5 border-b border-[#676767]">
+                    <button class="absolute top-2.5 right-2.5">
+                        <img src="Assets/Images/order/close.png" alt="">
+                    </button>
+                    <div class="pl-2 pr-8 flex items-center justify-between">
+                        <div class="flex items-center gap-7">
+                            <img src="Assets/Images/order/product2.png" alt="" class="w-[100px] h-[100px]">
+                            <div class="flex flex-col gap-5">
+                                <div class="flex flex-col">
+                                    <p class="font-semibold text-2xl xl:text-3xl">Блуа</p>
+                                    <div class="flex items-center gap-2 text-sm xl:text-base text-[#676767]">
+                                        <p>Коллекция:</p>
+                                        <a href="" class="underline">CHEVRON</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <p class="text-sm xl:text-base">4 499 ₽ / м2</p>
+                                    <p class="text-base xl:text-[18px] font-bold">x 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-bold text-xl xl:text-2xl">4 499 ₽ / м2</p>
+                    </div>
+                </div>
+                <div class="relative py-2.5 border-b border-[#676767]">
+                    <button class="absolute top-2.5 right-2.5">
+                        <img src="Assets/Images/order/close.png" alt="">
+                    </button>
+                    <div class="pl-2 pr-8 flex items-center justify-between">
+                        <div class="flex items-center gap-7">
+                            <img src="Assets/Images/order/product3.png" alt="" class="w-[100px] h-[100px]">
+                            <div class="flex flex-col gap-5">
+                                <div class="flex flex-col">
+                                    <p class="font-semibold text-2xl xl:text-3xl">Броуд-Пик</p>
+                                    <div class="flex items-center gap-2 text-sm xl:text-base text-[#676767]">
+                                        <p>Коллекция:</p>
+                                        <a href="" class="underline">ASCENT</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <p class="text-sm xl:text-base">2 699 ₽ / м2</p>
+                                    <p class="text-base xl:text-[18px] font-bold">x 2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-bold text-xl xl:text-2xl">5 398 ₽ / м2</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between px-8">
+                    <div class="flex items-center gap-6">
+                        <button>
+                            <img src="Assets/Images/order/close.png" alt="">
+                        </button>
+                        <p class="text-sm xl:text-base text-[#676767]">ОЧИСТИТЬ КОРЗИНУ</p>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <div class="flex items-center gap-12 xl:gap-20 text-xl xl:text-2xl font-semibold">
+                            <p>Итого:</p>
+                            <p>12 296 ₽</p>
+                        </div>
+                        <p class="text-[10px] xl:text-xs text-[#676767] line-through">12 496 ₽</p>
+                    </div>
+                </div>
+                <div class="flex items-center max-md:flex-col gap-4 justify-between px-14 py-6 bg-[#E4BA69] text-white text-sm xl:text-base">
+                    <a href="">ОФОРМИТЬ ЗАКАЗ</a>
+                    <a href="">ПЕРЕЙТИ В КОРЗИНУ</a>
+                </div>
+            </div>
+        </div>
     </header>
+
 
     <main class="my-10 grid-container">
         <div class="flex flex-col gap-6 xl:gap-8">
@@ -21,9 +118,9 @@
             <div class="flex max-lg:flex-col gap-6 xl:gap-8">
                 <div class="w-full lg:w-[70%] flex flex-col gap-6 xl:gap-8">
                     <div class="w-full p-4 xl:p-7 flex flex-col gap-6 border border-[#676767] tab-main">
-                        <ul class="flex items-center gap-4 font-bold text-lg md:text-xl xl:text-2xl">
-                            <li class="border-[0.8px] border-[#676767] text-[#676767] tab-toggler"><a href="" class="px-5 py-2 w-full">Доставить мне</a></li>
-                            <li class="border-[0.8px] border-[#676767] text-[#676767] tab-toggler"><a href="" class="px-5 py-2 w-full">Другой получатель</a></li>
+                        <ul class="flex max-md:flex-col items-center gap-4 font-bold text-lg md:text-xl xl:text-2xl">
+                            <li class="max-md:w-full max-md:text-center border-[0.8px] border-[#676767] text-[#676767] tab-toggler"><a href="" class="px-5 py-2 w-full">Доставить мне</a></li>
+                            <li class="max-md:w-full max-md:text-center border-[0.8px] border-[#676767] text-[#676767] tab-toggler"><a href="" class="px-5 py-2 w-full">Другой получатель</a></li>
                         </ul>
                         <div class="tab-card w-full flex flex-col gap-6 text-xs md:text-sm xl:text-[17px]">
                             <div class="flex max-md:flex-col gap-6 items-center">
@@ -104,7 +201,7 @@
                             <div class="flex flex-col gap-2.5 w-full">
                                 <div class="flex items-center justify-between px-2.5">
                                     <div class="flex items-center gap-4 md:gap-7">
-                                        <img src="Assets/Images/order/product1.png" alt="">
+                                        <img src="Assets/Images/order/product1.png" alt="" class="w-[70px] h-[70px]">
                                         <p class="text-sm md:text-base xl:text-lg">Дуб горный</p>
                                     </div>
                                     <div class="flex flex-col gap-3 items-end">
@@ -125,7 +222,7 @@
                             <div class="flex flex-col gap-2.5 w-full">
                                 <div class="flex items-center justify-between px-2.5">
                                     <div class="flex items-center gap-4 md:gap-7">
-                                        <img src="Assets/Images/order/product2.png" alt="">
+                                        <img src="Assets/Images/order/product2.png" alt="" class="w-[70px] h-[70px]">
                                         <p class="text-sm md:text-base xl:text-lg">Блуа</p>
                                     </div>
                                     <div class="flex flex-col gap-3 items-end">
@@ -146,7 +243,7 @@
                             <div class="flex flex-col gap-2.5 w-full">
                                 <div class="flex items-center justify-between px-2.5">
                                     <div class="flex items-center gap-4 md:gap-7">
-                                        <img src="Assets/Images/order/product3.png" alt="">
+                                        <img src="Assets/Images/order/product3.png" alt="" class="w-[70px] h-[70px]">
                                         <p class="text-sm md:text-base xl:text-lg">Броуд-пик</p>
                                     </div>
                                     <div class="flex flex-col gap-3 items-end">
@@ -165,7 +262,7 @@
                                 <div class="w-full h-px bg-[#676767]"></div>
                             </div>
                         </div>
-                        <div class="w-full max-w-[350px] mx-auto flex flex-col gap-1">
+                        <div class="w-full max-w-[350px] max-xl:px-4 mx-auto flex flex-col gap-1">
                             <p class="text-[10px] md:text-xs xl:text-sm text-[#676767]">Применить купон:</p>
                             <form action="" class="w-full relative">
                                 <input type="text" class="w-full bg-white border border-[#676767] pl-4 pr-12 py-2 text-base md:text-lg xl:text-xl">
