@@ -21,8 +21,6 @@ $(".tab-main").each(function(index) {
 
 
 /* cart */
-$('#cartToggler').mouseenter(() => {
-  $('#cartList').show(300);
-}).mouseleave(() => {
-  $('#cartList').hide(300);
-});
+$('#cartToggler').click(() => {
+  $("#cartList").toggle(300)
+})
